@@ -1,0 +1,60 @@
+{
+  "uploaded": [],
+  "picBed": {
+    "current": "github",
+    "uploader": "github",
+    "smms": {
+      "token": ""
+    },
+    "qiniu": {
+      "accessKey": "72PHgdeIvrNwYTBrnP-qD5LnuoQTXHeYsPQhE_Wo",
+      "area": "z0",
+      "bucket": "upload-anitoys-com",
+      "options": "",
+      "path": "hellocode/",
+      "secretKey": "YiwCqOhyn6npH1qEgaBcKK-eH2ZvXY-5fAv6P3rS",
+      "url": "https://upload.anitoys.com"
+    },
+    "github": {
+      "branch": "images",
+      "customUrl": "https://cdn.jsdelivr.net/gh/wangk-cc/picgo@images",
+      "path": "",
+      "repo": "wangk-cc/picgo",
+      "token": "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"
+    }
+  },
+  "settings": {
+    "shortKey": {
+      "picgo:upload": {
+        "enable": true,
+        "key": "CommandOrControl+Shift+P",
+        "name": "upload",
+        "label": "快捷上传"
+      }
+    },
+    "server": {
+      "port": 36677,
+      "host": "127.0.0.1",
+      "enable": true
+    },
+    "showUpdateTip": true,
+    "autoStart": true,
+    "rename": false,
+    "autoRename": false,
+    "miniWindowOntop": true,
+    "pasteStyle": "URL",
+    "uploadNotification": true,
+    "privacyEnsure": true
+  },
+  "picgoPlugins": {
+    "picgo-plugin-super-prefix": true,
+    "picgo-plugin-github-plus": true
+  },
+  "debug": true,
+  "PICGO_ENV": "GUI",
+  "needReload": false,
+  "picgo-plugin-super-prefix": {
+    "fileFormat": "YYYYMMDDHHmmss",
+    "prefixFormat": "YYYY/MM/DD/"
+  }
+}
