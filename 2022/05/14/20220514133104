@@ -1,0 +1,137 @@
+#!/bin/bash
+# Author:  王康 <earl.k.wang@wangk.cn>
+# BLOG:  https://lnmp.wangk.cn
+# apt install p7zip-full
+
+
+export DEBIAN_FRONTEND=noninteractive
+cd /
+umount -v /data
+#7z a -r -mx9 /mnt/h/微云同步助手/Operating/wsl/kylin-$(lsb_release -cs).7z .
+7z a -tzip -r -mx9 /mnt/h/微云同步助手/Operating/wsl/kylin-$(lsb_release -cs).zip .
+
+
+7z a -tzip -r -mx9 /var/kylin2020/kylin-jammy.zip /var/kylin/*
+
+7z a -tzip -r -mx9 /var/kylin2020/kylin-impish.zip /var/kylin/*
+
+7z a -tzip -r -mx9 /var/kylin2020/kylin-focal.zip /var/kylin/*
+
+
+7z a -r -mx9 /var/kylin2020/kylin-jammy.7z /var/kylin/*
+
+7z a -r -mx9 /var/kylin2020/kylin-impish.7z /var/kylin/*
+
+7z a -r -mx9 /var/kylin2020/kylin-focal.7z /var/kylin/*
+
+
+tar -czvf /var/kylin2020/kylin-jammy.tar.gz .
+
+tar -czvf /var/kylin2020/kylin-impish.tar.gz .
+
+tar -czvf /var/kylin2020/kylin-focal.tar.gz .
+
+
+
+tar -czvf /mnt/h/微云同步助手/Operating/docker/docker-desktop.tar.gz .
+tar -czvf /mnt/h/微云同步助手/Operating/docker/kylin-jammy.tar.gz .
+
+
+wsl --import Kylin2 E:\Applications\Kylin2 kylin-jammy.tar.gz
+
+
+
+DISM /Export-Image /SourceImageFile:H:\0.wim /SourceIndex:1 /DestinationImageFile:H:\10.0.19044.1682.wim
+DISM /Export-Image /SourceImageFile:H:\1.wim /SourceIndex:1 /DestinationImageFile:H:\10.0.19044.1682.wim
+DISM /Export-Image /SourceImageFile:H:\2.wim /SourceIndex:1 /DestinationImageFile:H:\10.0.19044.1682.wim
+DISM /Export-Image /SourceImageFile:H:\3.wim /SourceIndex:1 /DestinationImageFile:H:\10.0.19044.1682.wim
+
+
+DISM /export-image /sourceimagefile:H:\0.wim /sourceindex:1 /destinationimagefile:H:\10.0.19044.1682.esd /compress:recovery /checkintegrity
+DISM /export-image /sourceimagefile:H:\1.wim /sourceindex:1 /destinationimagefile:H:\10.0.19044.1682.esd /compress:recovery /checkintegrity
+DISM /export-image /sourceimagefile:H:\2.wim /sourceindex:1 /destinationimagefile:H:\10.0.19044.1682.esd /compress:recovery /checkintegrity
+DISM /export-image /sourceimagefile:H:\3.wim /sourceindex:1 /destinationimagefile:H:\10.0.19044.1682.esd /compress:recovery /checkintegrity
+
+
+DISM /export-image /sourceimagefile:H:\10.0.19044.1682.wim /sourceindex:1 /destinationimagefile:H:\10.0.19044.1682.esd /compress:recovery /checkintegrity
+DISM /export-image /sourceimagefile:H:\10.0.19044.1682.wim /sourceindex:2 /destinationimagefile:H:\10.0.19044.1682.esd /compress:recovery /checkintegrity
+DISM /export-image /sourceimagefile:H:\10.0.19044.1682.wim /sourceindex:3 /destinationimagefile:H:\10.0.19044.1682.esd /compress:recovery /checkintegrity
+DISM /export-image /sourceimagefile:H:\10.0.19044.1682.wim /sourceindex:4 /destinationimagefile:H:\10.0.19044.1682.esd /compress:recovery /checkintegrity
+
+wimlib-imagex export 10.0.19044.1682.wim all 10.0.19044.1682.esd --compress=LZMS
+
+DISM /export-image /sourceimagefile:H:\10.0.19044.1682.wim all /destinationimagefile:H:\10.0.19044.1682.esd /compress:recovery /checkintegrity
+
+
+wimlib-imagex export WK.wim all 10.0.19044.16822.esd --solid --solid-compress=lzms:100 --nocheck
+
+
+DISM /Export-Image /SourceImageFile:H:\10.0.19044.1682.wim /SourceIndex:1 /DestinationImageFile:H:\1.wim
+DISM /Export-Image /SourceImageFile:H:\10.0.19044.1682.wim /SourceIndex:2 /DestinationImageFile:H:\2.wim
+DISM /Export-Image /SourceImageFile:H:\10.0.19044.1682.wim /SourceIndex:3 /DestinationImageFile:H:\3.wim
+DISM /Export-Image /SourceImageFile:H:\10.0.19044.1682.wim /SourceIndex:4 /DestinationImageFile:H:\4.wim
+
+
+https://github.91chi.fun/https://github.com/Proxmark/proxmark3.git
+
+
+
+git clean -df
+git fetch --all 
+git reset --hard
+git pull master eb58fbdd75447a7da7bc380e153d562894f9e40b
+
+git checkout eb58fbdd75447a7da7bc380e153d562894f9e40b
+
+
+git checkout master
+git clean -df
+git fetch --all 
+git reset --hard
+git pull
+
+git checkout eb58fbdd75447a7da7bc380e153d562894f9e40b
+
+
+35fc7c2ab17aaadb1eb8f74d1152c371119b1693
+
+
+TAG_DATE=`git log -1 --format=%ct 81c6918ac582d1cd9643404b9e545b5e214eb7a1`
+date=$(date -d @$TAG_DATE +%Y%m%d)
+echo $date
+ctime="$(date -d @$TAG_DATE '+%Y-%m-%d %H:%M:%S')"
+
+kylin20200921
+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
+
+
+git remote add origin https://github.com/kylin20200921/proxmark3.git
+
+git branch -M RRG
+
+git push -u origin RRG
+
+git remote add origin https://github.com/kylin20200921/proxmark3.git
+
+git branch -M RRG256
+
+git push -u origin RRG256
+
+
+git remote add origin https://github.com/kylin20200921/proxmark3.git
+
+git branch -M RDV4
+
+git push -u origin RDV4
+
+
+
+git remote add origin https://github.com/kylin20200921/proxmark3.git
+
+git branch -M Official
+
+git push -u origin Official
+
+
+
+DISM /export-image /sourceimagefile:./1.wim /sourceindex:1 /destinationimagefile:./10.0.22000.652.esd /compress:recovery /checkintegrity
