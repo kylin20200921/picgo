@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dropEffect="none" class="no-js">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+	<meta name="description" content="Qianyi Boostrap Admin Panel" />
+	<meta name="author" content="" />
+
+	<title>商家 管理中心 - 宝辰科技新农供应链</title>
+
+	<!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">-->
+
+	<link rel="stylesheet" href="https://yjh.haonong365.com/shop_admin/static/src/common/fonts/zerocons/css/zerocons.css?v=1.0.39">
+	<link rel="stylesheet" href="https://yjh.haonong365.com/shop_admin/static/src/common/fonts/fontawesome/css/font-awesome.min.css?v=1.0.39">
+	<link rel="stylesheet" href="https://yjh.haonong365.com/shop_admin/static/src/common/css/bootstrap.min.css?v=1.0.39">
+	<link rel="stylesheet" href="https://yjh.haonong365.com/shop_admin/static/src/common/css/qianyi-core.min.css?v=1.0.39">
+	<link rel="stylesheet" href="https://yjh.haonong365.com/shop_admin/static/src/common/css/qianyi-forms.min.css?v=1.0.39">
+	<link rel="stylesheet" href="https://yjh.haonong365.com/shop_admin/static/src/common/css/qianyi-components.min.css?v=1.0.39">
+	<link rel="stylesheet" href="https://yjh.haonong365.com/shop_admin/static/src/common/css/qianyi-skins.min.css?v=1.0.39">
+	<link rel="stylesheet" href="https://yjh.haonong365.com/shop_admin/static/src/default/css/default.min.css?v=1.0.39">
+    
+    <link rel="shortcut icon" href="https://yjh.haonong365.com/image.php/shop/data/upload/media/user/10001/image/20220809/1660004588755709.png" type="image/x-icon" />
+    
+    <script type="text/javascript">
+        window.SYS = {};
+        SYS.VER = '1.0.39';
+        SYS.DEBUG = 0;
+        SYS.SW_ENABLE = 0;
+        SYS.CONFIG = {
+            account_url: 'https://yjh.haonong365.com/account.php',
+            admin_url: 'https://yjh.haonong365.com/admin.php',
+            base_url: 'https://yjh.haonong365.com',
+            index_url: "https://yjh.haonong365.com/admin.php",
+            index_page: 'admin.php',
+            static_url: 'https://yjh.haonong365.com/shop_admin/static/src/default'
+        };
+
+        var SYSTEM = SYSTEM || {};
+        SYSTEM.skin = 'green';
+
+        SYS.LD = {lang:'zh_CN', currency_id:86, symbol:'￥', symbol_right:'RMB'};
+
+            </script>
+    
+        
+    <script type="text/javascript" src="https://yjh.haonong365.com/shop_admin/static/src/default/js/../../../../../shop/static/src/default/js/config.js?v=1.0.39"></script>
+    <script src="https://yjh.haonong365.com/shop_admin/static/src/common/js/libs.min.js?v=1.0.39?self=false"></script>
+    
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body class="page-body skin-default user-info-navbar-skin-default"> <!-- navy watermelon facebook  green-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <style type="text/css">.b1 {
+            text-align: center;
+            white-space-collapsing: preserve;
+        }
+
+        .t1 {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .r1 {
+            height: 37.5pt;
+        }
+
+        .r2 {
+            height: 25.5pt;
+        }
+
+        .r3 {
+            height: 40.5pt;
+        }
+
+        .c1 {
+            white-space: pre-wrap;
+            text-align: center;
+            background-color: silver;
+            border-top: thin solid;
+            border-right: thin solid;
+            border-bottom: thin solid;
+            border-left: thin solid;
+            font-weight: bold;
+            color: black;
+            font-size: 20pt;
+        }
+
+        .c2 {
+            white-space: pre-wrap;
+            text-align: center;
+            border-top: thin solid;
+            border-right: thin solid;
+            border-bottom: thin solid;
+            border-left: thin solid;
+            color: black;
+            font-size: 11pt;
+        }
+
+        .c3 {
+            white-space: pre-wrap;
+            text-align: center;
+            background-color: silver;
+            border-top: thin solid;
+            border-right: thin solid;
+            border-bottom: thin solid;
+            border-left: thin solid;
+            color: black;
+            font-size: 18pt;
+        }
+
+        .c4 {
+            white-space: pre-wrap;
+            border-top: thin solid;
+            border-right: thin solid;
+            border-bottom: thin solid;
+            border-left: thin solid;
+            color: black;
+            font-size: 11pt;
+        }
+
+        .c5 {
+            white-space: pre-wrap;
+            text-align: left;
+            border-top: thin solid;
+            border-right: thin solid;
+            border-bottom: thin solid;
+            border-left: thin solid;
+            color: black;
+            font-size: 11pt;
+        }
+    </style>
+</head>
+<body class="b1">
+
+<table class="t1">
+    <colgroup>
+        <col width="74">
+        <col width="160">
+        <col width="152">
+        <col width="212">
+        <col width="85">
+        <col width="62">
+        <col width="64">
+        <col width="75">
+        <col width="87">
+        <col width="56">
+    </colgroup>
+    <tbody>
+    <tr class="r1">
+        <td class="c1" colspan="10">订单</td>
+    </tr>
+    <tr class="r2">
+        <td class="c2">订单编号</td>
+        <td class="c2">DD-20221203-00024</td>
+        <td class="c2">下单日期</td>
+        <td class="c2">2022-12-03 11:21:21</td>
+        <td class="c2" colspan="2">预交货日期</td>
+        <td class="c2" colspan="4">2022-12-03 11:21:21</td>
+    </tr>
+    <tr class="r2">
+        <td class="c2">客户名称</td>
+        <td class="c2" colspan="3">邹连香</td>
+        <td class="c2" colspan="2">联系人</td>
+        <td class="c2" colspan="4">邹连香</td>
+    </tr>
+    <tr class="r2">
+        <td class="c2">收货地址</td>
+        <td class="c2" colspan="3">江苏省/宿迁市/宿豫区,曹集乡人民政府食堂</td>
+        <td class="c2" colspan="2">联系电话</td>
+        <td class="c2" colspan="4">13485097219</td>
+    </tr>
+    <tr class="r3">
+        <td class="c3" colspan="10">商品明细</td>
+    </tr>
+    <tr class="r2">
+        <td class="c2">序号</td>
+        <td class="c2">属性编号</td>
+        <td class="c2" colspan="3">商品名称</td>
+        <td class="c2">单价(￥)</td>
+        <td class="c2">数量</td>
+        <td class="c2">计量单位</td>
+        <td class="c2">金额小计(￥)</td>
+        <td class="c2">备注</td>
+    </tr>
+            <tr class="r2">
+            <td class="c4">1</td>
+            <td class="c2">av5O80</td>
+            <td class="c2" colspan="3">长豆角（精品）/斤 长度（40-50cm）</td>
+            <td class="c4">6.00</td>
+            <td class="c4">25</td>
+            <td class="c2"></td>
+            <td class="c4">150.00</td>
+            <td class="c2">&nbsp;</td>
+        </tr>
+            <tr class="r2">
+            <td class="c4">2</td>
+            <td class="c2">OyrTW1</td>
+            <td class="c2" colspan="3">香菜（精品）/斤 大（20-25cm）</td>
+            <td class="c4">3.30</td>
+            <td class="c4">2</td>
+            <td class="c2"></td>
+            <td class="c4">6.60</td>
+            <td class="c2">&nbsp;</td>
+        </tr>
+            <tr class="r2">
+            <td class="c4">3</td>
+            <td class="c2">SKmbn9</td>
+            <td class="c2" colspan="3">新黄心土豆（一级）/斤 大（250-400g）</td>
+            <td class="c4">1.80</td>
+            <td class="c4">20</td>
+            <td class="c2"></td>
+            <td class="c4">36.00</td>
+            <td class="c2">&nbsp;</td>
+        </tr>
+            <tr class="r2">
+            <td class="c4">4</td>
+            <td class="c2">WfnXLK</td>
+            <td class="c2" colspan="3">正大无菌鸡蛋 30斤/箱</td>
+            <td class="c4">7.20</td>
+            <td class="c4">4</td>
+            <td class="c2"></td>
+            <td class="c4">28.80</td>
+            <td class="c2">&nbsp;</td>
+        </tr>
+            <tr class="r2">
+            <td class="c4">5</td>
+            <td class="c2">yv5eH0</td>
+            <td class="c2" colspan="3">熟牛腿肉（半成品） 斤</td>
+            <td class="c4">56.00</td>
+            <td class="c4">10</td>
+            <td class="c2"></td>
+            <td class="c4">560.00</td>
+            <td class="c2">&nbsp;</td>
+        </tr>
+            <tr class="r2">
+            <td class="c4">6</td>
+            <td class="c2">mnnnn1</td>
+            <td class="c2" colspan="3">水发牛百叶（黑） 斤</td>
+            <td class="c4">48.00</td>
+            <td class="c4">10</td>
+            <td class="c2"></td>
+            <td class="c4">480.00</td>
+            <td class="c2">&nbsp;</td>
+        </tr>
+            <tr class="r2">
+            <td class="c4">7</td>
+            <td class="c2">zTubj1</td>
+            <td class="c2" colspan="3">双汇特嫩方腿香肠（箱(250g*30个)） 箱</td>
+            <td class="c4">150.00</td>
+            <td class="c4">1</td>
+            <td class="c2"></td>
+            <td class="c4">150.00</td>
+            <td class="c2">&nbsp;</td>
+        </tr>
+            <tr class="r2">
+            <td class="c4">8</td>
+            <td class="c2">4evjv5</td>
+            <td class="c2" colspan="3">黑木耳/斤 </td>
+            <td class="c4">45.00</td>
+            <td class="c4">2</td>
+            <td class="c2"></td>
+            <td class="c4">90.00</td>
+            <td class="c2">&nbsp;</td>
+        </tr>
+            <tr class="r2">
+            <td class="c4">9</td>
+            <td class="c2">TG0y58</td>
+            <td class="c2" colspan="3">干红辣椒段/斤 </td>
+            <td class="c4">22.00</td>
+            <td class="c4">10</td>
+            <td class="c2"></td>
+            <td class="c4">220.00</td>
+            <td class="c2">&nbsp;</td>
+        </tr>
+            <tr class="r2">
+            <td class="c4">10</td>
+            <td class="c2">SKW1WH</td>
+            <td class="c2" colspan="3">干红辣椒面/斤 </td>
+            <td class="c4">22.00</td>
+            <td class="c4">3</td>
+            <td class="c2"></td>
+            <td class="c4">66.00</td>
+            <td class="c2">&nbsp;</td>
+        </tr>
+            <tr class="r2">
+            <td class="c4">11</td>
+            <td class="c2">LqP444</td>
+            <td class="c2" colspan="3">千张/斤 </td>
+            <td class="c4">4.50</td>
+            <td class="c4">10</td>
+            <td class="c2"></td>
+            <td class="c4">45.00</td>
+            <td class="c2">&nbsp;</td>
+        </tr>
+            <tr class="r2">
+            <td class="c4">12</td>
+            <td class="c2">aDWDGS</td>
+            <td class="c2" colspan="3">大黄豆芽头/斤 </td>
+            <td class="c4">1.50</td>
+            <td class="c4">15</td>
+            <td class="c2"></td>
+            <td class="c4">22.50</td>
+            <td class="c2">&nbsp;</td>
+        </tr>
+            <tr class="r2">
+            <td class="c4">13</td>
+            <td class="c2">inDez1</td>
+            <td class="c2" colspan="3">双汇纯仔排（半成品） 斤</td>
+            <td class="c4">38.00</td>
+            <td class="c4">50</td>
+            <td class="c2"></td>
+            <td class="c4">1900.00</td>
+            <td class="c2">&nbsp;</td>
+        </tr>
+            <tr class="r2">
+            <td class="c4">14</td>
+            <td class="c2">v1unnD</td>
+            <td class="c2" colspan="3">鸭血 斤</td>
+            <td class="c4">2.50</td>
+            <td class="c4">10</td>
+            <td class="c2"></td>
+            <td class="c4">25.00</td>
+            <td class="c2">&nbsp;</td>
+        </tr>
+        <tr class="r2">
+        <td class="c2">&nbsp;</td>
+        <td class="c2" colspan="4">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+    </tr>
+    <tr class="r2">
+        <td class="c2">&nbsp;</td>
+        <td class="c2" colspan="4">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+    </tr>
+    <tr class="r2">
+        <td class="c2">&nbsp;</td>
+        <td class="c2" colspan="4">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+    </tr>
+    <tr class="r2">
+        <td class="c5" colspan="5">订单运费：</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c4">0.00</td>
+        <td class="c4">&nbsp;</td>
+    </tr>
+    <tr class="r2">
+        <td class="c5" colspan="5">优惠券抵扣：</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c4">-0.00</td>
+        <td class="c4">&nbsp;</td>
+    </tr>
+    <tr class="r2">
+        <td class="c5" colspan="5">合计：</td>
+        <td class="c2">&nbsp;</td>
+        <td class="c4">172</td>
+        <td class="c4"></td>
+        <td class="c4">3779.90</td>
+        <td class="c2">&nbsp;</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<script type="text/javascript">
+    window.onload = function () {
+        if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+            alert('您的浏览器需要您同时按下 CTRL + P 来打印');
+        } else {
+            window.print();
+        }
+    }
+</script>
+
+</body>
+</html>
+
+<div class="page-loading-overlay">
+	<div class="loader-2"></div>
+</div>
+
+
+
+</body>
+</html>
